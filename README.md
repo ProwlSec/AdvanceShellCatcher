@@ -87,3 +87,82 @@ set LPORT <listening port>
 ```
 <img width="1082" height="169" alt="image" src="https://github.com/user-attachments/assets/c34e84b0-3962-441a-88e0-2bc2fae071ea" />
 
+
+## ❓ FAQ
+
+### 🔹 Can PROWLER be used in OSCP and other OffSec exams?
+**Yes.**  
+PROWLER does not perform exploitation, automation, brute forcing, enumeration, or any prohibited actions.  
+It functions purely as a **reverse shell listener**, similar to `nc -lvnp` or Metasploit’s `multi/handler`, and is therefore compliant with OffSec exam rules.
+
+---
+
+### 🔹 Does PROWLER exploit targets automatically?
+No.  
+PROWLER only **accepts incoming reverse shell connections**.  
+It never sends exploit code, payloads, or initiates an attack on any host.
+
+---
+
+### 🔹 Is PROWLER allowed on other certifications like PNPT, eJPT, eCPPT, CRTO, etc.?
+Yes.  
+Since PROWLER only handles shells and does not automate exploitation, it is allowed in all major hands-on exams.
+
+---
+
+### 🔹 Does PROWLER work on Windows shells?
+Partially.  
+It works if the payload provides a Windows-compatible reverse shell (e.g., certain versions of Netcat).  
+Python PTY shells are Unix-only.
+
+---
+
+### 🔹 How many sessions can PROWLER handle?
+Up to **10 simultaneous sessions** by default.  
+You can modify this limit in the source if needed.
+
+---
+
+### 🔹 Does PROWLER support TTY/PTY upgrades?
+Yes.  
+The Python payload module automatically spawns a PTY-enabled Bash shell for full TTY control.
+
+---
+
+### 🔹 Does PROWLER require administrative privileges?
+No.  
+It only needs permission to bind to the chosen port (above 1024 unless run as root).
+
+---
+
+### 🔹 What platforms are supported?
+- Linux  
+- macOS  
+- Unix-like systems  
+Reverse shell sources can be anything (Linux, macOS, Windows) as long as they provide a valid TCP shell.
+
+---
+
+### 🔹 Can PROWLER be used for team collaboration or multi-host operations?
+Yes.  
+PROWLER supports multiple incoming shells simultaneously, making it useful for red teaming or multi-host labs.
+
+---
+
+### 🔹 Is PROWLER safe for production or internal network labs?
+Yes.  
+It acts as a passive listener and does not perform any intrusive operations on its own.
+
+---
+
+
+## 🔚 Closing Note
+
+Thank you for checking out **PROWLER** — a project built with a focus on stability, clarity, and real-world usefulness for pentesters, students, and red‑teamers.  
+Whether you're practicing in a home lab, working through certifications like **OSCP**, or performing authorized assessments, I hope PROWLER becomes a reliable part of your toolkit.
+
+If you have **feature suggestions, bug reports, optimization ideas, or general feedback**, they are always welcome.  
+Feel free to open an **Issue** or submit a **Pull Request** — contributions from the community help the project grow and improve.
+
+Stay sharp, stay ethical, and keep prowling safely. 🐾  
+**— ProwlSec**
